@@ -7,6 +7,9 @@ const SPEED = 150.0
 const JUMP_VELOCITY = -400.0
 const ACCELERATION := 50
 const DECELERATION := 100
+var facing := 1
+var gears: Array = []
+
 
 func _physics_process(delta: float) -> void:
 	# Add gravity if the character is in the air
@@ -27,8 +30,10 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("left", "right")
 	# flip sprite based on direction
 	if direction < 0:
+		facing = 1
 		animation.flip_h = false
 	elif direction > 0:
+		facing = -1
 		animation.flip_h = true
 	
 	if is_on_floor() and velocity.x != 0:
