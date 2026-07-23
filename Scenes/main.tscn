@@ -1,16 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://8utghou5n8e1"]
+[gd_scene load_steps=10 format=3 uid="uid://8utghou5n8e1"]
 
-[ext_resource type="Texture2D" uid="uid://by2o2jnioskws" path="res://Assets/brick_wall.png" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://bclfbqtkdyrep" path="res://Assets/tilemaptemplate (1).png" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dwlp3h7xxs7me" path="res://Scenes/player.tscn" id="2_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://2aa0y4f4pjw3" path="res://Assets/scaffold.png" id="2_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://bx65f3a1luu0f" path="res://Scenes/gear.tscn" id="4_jjvhh"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo1nx"]
-texture = ExtResource("1_jjgbg")
-0:0/size_in_atlas = Vector2i(2, 2)
-0:0/0 = 0
-2:0/size_in_atlas = Vector2i(2, 2)
-2:0/0 = 0
+[ext_resource type="PackedScene" uid="uid://cnju0k7dcg5o0" path="res://Scenes/ladder.tscn" id="5_kry3j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jjvhh"]
 texture = ExtResource("2_8gbba")
@@ -80,11 +74,19 @@ texture_region_size = Vector2i(8, 8)
 3:7/0 = 0
 3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.06102, -4.06102, 3.95689, -3.95689, 3.9595, 3.9595, -3.95689, 3.95689)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kry3j"]
+texture = ExtResource("2_jjvhh")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
 [sub_resource type="TileSet" id="TileSet_8gbba"]
-tile_size = Vector2i(8, 8)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_bo1nx")
 sources/1 = SubResource("TileSetAtlasSource_jjvhh")
+sources/2 = SubResource("TileSetAtlasSource_kry3j")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjvhh"]
 normal = Vector2(0, 1)
@@ -94,7 +96,7 @@ normal = Vector2(0, 1)
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_8gbba")
 format = 2
-layer_0/tile_data = PackedInt32Array(65523, 1, 0, 65524, 1, 0, 65525, 1, 0, 65526, 1, 0, 65527, 1, 0, 65528, 1, 0, 65529, 1, 0, 65530, 1, 0, 65531, 1, 0, 65532, 1, 0, 65533, 1, 0, 65534, 1, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 16, 1, 0, 17, 1, 0, 18, 1, 0, 19, 1, 0, 20, 1, 0, 21, 1, 0, 22, 1, 0, 23, 1, 0, 24, 1, 0, 25, 1, 0, 26, 1, 0, 27, 1, 0, 28, 1, 0, 29, 1, 0, 30, 1, 0, 31, 1, 0, 32, 1, 0, 33, 1, 0, 34, 1, 0, 35, 1, 0, 36, 1, 0, 37, 1, 0)
+layer_0/tile_data = PackedInt32Array(65532, 65538, 0, 65533, 65538, 0, 65534, 65538, 0, 65535, 65538, 0, 0, 65538, 0, 1, 65538, 0, 2, 65538, 0, 3, 65538, 0, 4, 65538, 0, 5, 65538, 0, 6, 65538, 0, 7, 65538, 0, 8, 65538, 0, 9, 65538, 0, 10, 65538, 0, 11, 65538, 0, 12, 131074, 0, 65531, 2, 0, -262149, 2, 0, -262148, 65538, 0, -262147, 65538, 0, -262146, 65538, 0, -262145, 131074, 0, -196603, 2, 0, -196602, 65538, 0, -196601, 65538, 0, -196600, 131074, 0, -589819, 2, 0, -589818, 65538, 0, -589817, 65538, 0, -589816, 131074, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_bo1nx")]
 position = Vector2(69, -63)
@@ -113,3 +115,14 @@ position = Vector2(-16, -33)
 
 [node name="Gear3" parent="." instance=ExtResource("4_jjvhh")]
 position = Vector2(136, -106)
+
+[node name="Ladder" parent="." instance=ExtResource("5_kry3j")]
+position = Vector2(72, -136)
+
+[node name="Ladder2" parent="." instance=ExtResource("5_kry3j")]
+position = Vector2(72, -120)
+type = 1
+
+[node name="Ladder3" parent="." instance=ExtResource("5_kry3j")]
+position = Vector2(72, -104)
+type = 2

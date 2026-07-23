@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://cnju0k7dcg5o0"]
+
+[ext_resource type="Script" uid="uid://cnweacjpnouok" path="res://Scripts/ladder.gd" id="1_fnw1j"]
+[ext_resource type="Texture2D" uid="uid://dolpda1ecg6v1" path="res://Assets/ladder.png" id="2_fc354"]
+[ext_resource type="Script" uid="uid://br1fpcry1yt11" path="res://Scripts/ladder_up.gd" id="2_vwlf3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cve4p"]
+size = Vector2(16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnw1j"]
+atlas = ExtResource("2_fc354")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fc354"]
+atlas = ExtResource("2_fc354")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwlf3"]
+atlas = ExtResource("2_fc354")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cve4p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnw1j")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fc354")
+}],
+"loop": true,
+"name": &"middle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwlf3")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[node name="Ladder" type="Node2D"]
+script = ExtResource("1_fnw1j")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_vwlf3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_cve4p")
+
+[node name="ladderType" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cve4p")
+animation = &"up"

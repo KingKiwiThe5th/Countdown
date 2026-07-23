@@ -27,9 +27,9 @@ func _physics_process(delta: float) -> void:
 	elif direction > 0:
 		animation.flip_h = true
 	
-	if velocity.x != 0:
+	if is_on_floor() and velocity.x != 0:
 		animation.play("walk")
-	elif !velocity:
+	elif velocity.x == 0 and velocity.y == 0:
 		animation.play("idle")
 	
 	# Apply movement or deceleration

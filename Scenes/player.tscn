@@ -166,7 +166,7 @@ script = ExtResource("1_cvnsp")
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_olqyp")
 animation = &"walk"
-frame_progress = 0.711488
+frame_progress = 0.373783
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.375, 3.75)
