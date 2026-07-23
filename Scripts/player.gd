@@ -10,6 +10,7 @@ const ACCELERATION := 50
 const DECELERATION := 100
 var facing := 1
 var gears: Array = []
+var hasGear
 
 
 func _physics_process(delta: float) -> void:

@@ -3,7 +3,7 @@ extends Area2D
 var player = null
 var following = false
 var gears: Array = []
-#attempt to make it follow after each other. didnt really work. might come back to it
+# attempt to make it follow after each other. didnt really work. might come back to it
 var leader = null
 
 func _process(delta):
@@ -16,6 +16,7 @@ func _process(delta):
 			player.gears.append(self)
 			if player.gears.size() > 0:
 				leader = player.gears[player.gears.size() - 1]
+				player.hasGear = true
 			else:
 				leader = player
 				player.gears.append(self)
@@ -27,8 +28,9 @@ func _process(delta):
 		var target = player.global_position + Vector2(offset * player.facing, 0)
 		target.y += sin(Time.get_ticks_msec() * 0.05) * 5
 		global_position = global_position.lerp(target, delta * 3.5)
-			
-			
-			#player.gears.erase(self)
-		#following = false
-		#player = null
+		
+		
+		
+		# player.gears.erase(self)
+		# following = false
+		# player = null

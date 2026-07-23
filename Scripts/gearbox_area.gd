@@ -1,0 +1,33 @@
+extends Area2D
+
+@onready var anim: AnimatedSprite2D = $"../AnimatedSprite2D"
+@onready var label: Label = $PressE
+var hasBody
+var gear_count := 0
+var player
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("select") and hasBody and player.hasGear:
+		# changing animations
+		if gear_count == 0:
+			anim.play("one")
+			gear_count += 1
+		elif gear_count == 1:
+			anim.play("two")
+			gear_count += 1
+		elif gear_count == 2:
+			anim.play("full")
+
+func _on_body_entered(body: Node2D) -> void:
+	# checking valid terms for the player
+	if body.name == "Player":
+		player = body
+		if player.hasGear:
+			label.visible = true
+			hasBody = true
+
+func _on_body_exited(body: Node2D) -> void:
+	if body.name == "Player":
+		player = null
+		label.visible = false
+		hasBody = false
