@@ -1,3 +1,54 @@
-[gd_scene format=3 uid="uid://bx65f3a1luu0f"]
+[gd_scene load_steps=9 format=3 uid="uid://bx65f3a1luu0f"]
+
+[ext_resource type="Texture2D" uid="uid://bn3ina1ffaa8g" path="res://Assets/cogItem-Sheet.png" id="1_7vd1c"]
+[ext_resource type="Script" uid="uid://bjjusjbo0a1m3" path="res://Scripts/gear.gd" id="2_1sowc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1sowc"]
+atlas = ExtResource("1_7vd1c")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnw63"]
+atlas = ExtResource("1_7vd1c")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4fdf"]
+atlas = ExtResource("1_7vd1c")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w12pn"]
+atlas = ExtResource("1_7vd1c")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x87s8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1sowc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnw63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4fdf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w12pn")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vd1c"]
+size = Vector2(23, 23)
 
 [node name="Gear" type="Node2D"]
+
+[node name="gear_anim" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x87s8")
+animation = &"spin"
+frame_progress = 0.755965
+script = ExtResource("2_1sowc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7vd1c")
