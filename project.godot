@@ -20,6 +20,14 @@ config/icon="res://Assets/icon.svg"
 Countdown="*res://Scripts/countdown.gd"
 LevelReset="*res://Scripts/level_reset.gd"
 
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+
 [gui]
 
 theme/custom_font="uid://rd5lk2anb0iv"
