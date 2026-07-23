@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dwlp3h7xxs7me"]
+[gd_scene load_steps=21 format=3 uid="uid://dwlp3h7xxs7me"]
 
 [ext_resource type="Script" uid="uid://wrs7jhmfh8lm" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://fj4rossy466n" path="res://Assets/felicityAnimations-Sheet.png" id="2_cvnsp"]
@@ -67,14 +67,6 @@ region = Rect2(256, 0, 32, 32)
 atlas = ExtResource("2_cvnsp")
 region = Rect2(288, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fs7ks"]
-atlas = ExtResource("2_cvnsp")
-region = Rect2(320, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l6n3p"]
-atlas = ExtResource("2_cvnsp")
-region = Rect2(352, 0, 32, 32)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_olqyp"]
 animations = [{
 "frames": [{
@@ -103,10 +95,10 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 2.0,
 "texture": SubResource("AtlasTexture_8erm5")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": SubResource("AtlasTexture_f1ek2")
 }],
 "loop": true,
@@ -145,12 +137,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_igrcy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fs7ks")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l6n3p")
 }],
 "loop": true,
 "name": &"walk",
@@ -165,8 +151,7 @@ script = ExtResource("1_cvnsp")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_olqyp")
-animation = &"walk"
-frame_progress = 0.373783
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.375, 3.75)
