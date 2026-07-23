@@ -18,6 +18,7 @@ config/icon="res://Assets/icon.svg"
 [autoload]
 
 Countdown="*res://Scripts/countdown.gd"
+LevelReset="*res://Scripts/level_reset.gd"
 
 [input]
 

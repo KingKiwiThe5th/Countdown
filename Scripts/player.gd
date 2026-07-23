@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var base_position :Vector2 = position
 @onready var animation: AnimatedSprite2D = $Animation
 
 # Constants for movement physics
@@ -49,3 +50,8 @@ func _physics_process(delta: float) -> void:
 
 	# Execute the movement and handle collisions
 	move_and_slide()
+
+func die():
+	print("you died")
+	position = base_position
+	LevelReset.reset_gears = true
