@@ -15,6 +15,10 @@ run/main_scene="uid://8utghou5n8e1"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
+[autoload]
+
+Countdown="*res://Scripts/countdown.gd"
+
 [input]
 
 jump={
