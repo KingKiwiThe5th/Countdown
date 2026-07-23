@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bx65f3a1luu0f"]
+[gd_scene load_steps=9 format=3 uid="uid://bx65f3a1luu0f"]
 
 [ext_resource type="Texture2D" uid="uid://bn3ina1ffaa8g" path="res://Assets/cogItem-Sheet.png" id="1_7vd1c"]
+[ext_resource type="Script" uid="uid://d1yjdipoglxtu" path="res://Scripts/Gear.gd" id="2_7vd1c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1sowc"]
 atlas = ExtResource("1_7vd1c")
@@ -39,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vd1c"]
-size = Vector2(23, 23)
+size = Vector2(9, 10)
 
 [node name="Gear" type="Node2D"]
 
@@ -49,5 +50,9 @@ animation = &"spin"
 autoplay = "spin"
 frame_progress = 0.755965
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_7vd1c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_7vd1c")
