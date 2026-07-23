@@ -3,8 +3,10 @@ extends CharacterBody2D
 @onready var animation: AnimatedSprite2D = $Animation
 
 # Constants for movement physics
-const SPEED = 300.0
+const SPEED = 150.0
 const JUMP_VELOCITY = -400.0
+const ACCELERATION := 50
+const DECELERATION := 100
 
 func _physics_process(delta: float) -> void:
 	# Add gravity if the character is in the air
@@ -18,6 +20,8 @@ func _physics_process(delta: float) -> void:
 	# Handle jump input
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+	if Input.is_action_just_released("jump") and velocity.y < JUMP_VELOCITY/2:
+		velocity.y = JUMP_VELOCITY/2
 
 	# Get the input direction: -1 (left), 1 (right), or 0 (none)
 	var direction := Input.get_axis("left", "right")
@@ -34,10 +38,9 @@ func _physics_process(delta: float) -> void:
 	
 	# Apply movement or deceleration
 	if direction:
-		velocity.x = direction * SPEED
-		
+		velocity.x = move_toward(velocity.x, direction * SPEED, ACCELERATION)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, DECELERATION)
 
 	# Execute the movement and handle collisions
 	move_and_slide()
