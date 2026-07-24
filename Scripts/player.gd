@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var animation: AnimatedSprite2D = $Animation
 
 # Constants for movement physics
-const SPEED = 150.0
+const SPEED = 100.0
 const JUMP_VELOCITY = -400.0
 const ACCELERATION := 50
 const DECELERATION := 100

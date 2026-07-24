@@ -5,12 +5,15 @@ extends Node2D
 @export var lift_id: int
 @onready var base_position = position
 
+var unlocked
+
 func _ready() -> void:
 	Countdown.lifts.append(self)
 
 func move():
 	var tween = create_tween()
 	tween.tween_property(self,"position",target,time)
+	unlocked = true
 	moved = true
 
 var moved = false
@@ -28,5 +31,6 @@ func _on_player_detector_body_entered(body: Node2D) -> void:
 func _on_player_detector_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		player_on = false
-		var tween = create_tween()
-		tween.tween_property(self,"position",target,time)
+		if unlocked:
+			var tween = create_tween()
+			tween.tween_property(self,"position",target,time)
