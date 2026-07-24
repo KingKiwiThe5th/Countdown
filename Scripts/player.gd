@@ -56,4 +56,9 @@ func die():
 	print("you died")
 	velocity.y = 0
 	position = base_position
+	for gear in gears:
+		if is_instance_valid(gear):
+			gear.reset()
+	gears.clear()
+	hasGear = false
 	LevelReset.reset_gears = true
