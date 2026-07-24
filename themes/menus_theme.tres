@@ -1,6 +1,15 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b3l4h3hksieag"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://b3l4h3hksieag"]
 
 [ext_resource type="FontFile" uid="uid://b20ymth1saaq7" path="res://Assets/fonts/alagard.ttf" id="1_x2h2x"]
+[ext_resource type="Texture2D" uid="uid://b01y85icc21xg" path="res://Assets/buttonTexture.png" id="1_x741n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ukpce"]
+texture = ExtResource("1_x741n")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
 
 [resource]
 default_font = ExtResource("1_x2h2x")
+Button/styles/normal = SubResource("StyleBoxTexture_ukpce")

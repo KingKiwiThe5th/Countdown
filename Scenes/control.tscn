@@ -2,14 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://c0wu1p3y3u61a" path="res://Assets/startArt.jpg" id="1_cgmvo"]
 [ext_resource type="FontFile" uid="uid://b20ymth1saaq7" path="res://Assets/fonts/alagard.ttf" id="2_vh8u0"]
+[ext_resource type="Theme" uid="uid://b3l4h3hksieag" path="res://themes/menus_theme.tres" id="3_vh8u0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wpaqk"]
 font = ExtResource("2_vh8u0")
 font_color = Color(0.77, 0.59752, 0.3388, 1)
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Theme" id="Theme_btyrf"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -28,18 +27,21 @@ texture = ExtResource("1_cgmvo")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
-offset_right = 122.0
-offset_bottom = 15.0
+offset_left = 10.0
+offset_top = 7.0
+offset_right = 132.0
+offset_bottom = 22.0
 scale = Vector2(1.7, 1.7)
 text = "Game Name Here"
 label_settings = SubResource("LabelSettings_wpaqk")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
-offset_top = 83.0
-offset_right = 122.0
-offset_bottom = 106.0
+offset_left = 10.0
+offset_top = 44.0
+offset_right = 132.0
+offset_bottom = 67.0
 grow_vertical = 2
-theme = SubResource("Theme_btyrf")
+theme = ExtResource("3_vh8u0")
 theme_override_fonts/font = ExtResource("2_vh8u0")
 text = "Start Climb"
