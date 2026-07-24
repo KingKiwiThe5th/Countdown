@@ -1,6 +1,6 @@
 extends Node2D
 
-@export_enum("right","left") var direction
+@export_enum("right","left") var direction = 1
 @onready var press_e: Label = $Area2D/PressE
 @export var corresponding_lift_id: int
 var corresponding_lift
