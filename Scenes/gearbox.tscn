@@ -132,6 +132,7 @@ shape = SubResource("RectangleShape2D_3yhjx")
 debug_color = Color(1.01075e-06, 0.531399, 1.05888e-06, 0.419608)
 
 [node name="PressE" type="Label" parent="Area2D"]
+visible = false
 texture_filter = 1
 offset_left = -28.0
 offset_top = -28.0

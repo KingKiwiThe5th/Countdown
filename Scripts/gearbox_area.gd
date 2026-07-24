@@ -5,6 +5,7 @@ extends Area2D
 var hasBody
 var gear_count := 0
 var player
+var full
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("select") and hasBody and player.hasGear:
@@ -17,12 +18,15 @@ func _process(delta: float) -> void:
 			gear_count += 1
 		elif gear_count == 2:
 			anim.play("full")
+			get_parent().full = true
+			full = true
+			label.visible = false
 
 func _on_body_entered(body: Node2D) -> void:
 	# checking valid terms for the player
 	if body.name == "Player":
 		player = body
-		if player.hasGear:
+		if player.hasGear and !full:
 			label.visible = true
 			hasBody = true
 

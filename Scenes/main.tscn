@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://8utghou5n8e1"]
+[gd_scene load_steps=19 format=4 uid="uid://8utghou5n8e1"]
 
 [ext_resource type="Texture2D" uid="uid://bclfbqtkdyrep" path="res://Assets/tilemaptemplate (1).png" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dwlp3h7xxs7me" path="res://Scenes/player.tscn" id="2_bo1nx"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c61tyqnqt7f0w" path="res://Scenes/gearbox.tscn" id="8_344ge"]
 [ext_resource type="Texture2D" uid="uid://dlt2oiv5m6xdd" path="res://Assets/background_assets/backgroundBricksLarge.png" id="9_ynf5e"]
 [ext_resource type="Texture2D" uid="uid://bgr43tea8nujl" path="res://Assets/background_assets/backgroundAssets.png" id="10_hptm8"]
+[ext_resource type="PackedScene" uid="uid://cqmeov0x16lyn" path="res://Scenes/lift.tscn" id="11_d1ilt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jjvhh"]
 texture = ExtResource("2_8gbba")
@@ -156,7 +157,8 @@ position = Vector2(24, -16)
 
 [node name="Gearbox" parent="." instance=ExtResource("8_344ge")]
 position = Vector2(-32, -96)
-direction = 0
+direction = 1
+corresponding_lift_id = 1
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 z_index = -1
@@ -176,3 +178,9 @@ scroll_offset = Vector2(0, 4)
 z_index = -1
 tile_map_data = PackedByteArray("AAACAPz/AQAAAAAAAAACAP3/AQAAAAEAAAACAP7/AQAAAAIAAAADAPz/AQABAAAAAAADAP3/AQABAAEAAAADAP7/AQABAAIAAAALAP3/AQADAAIAAAD8//3/AQACAAEAAAD9//3/AQADAAEAAAAIAPv/AQACAAAAAAAJAPv/AQADAAAAAAD///j/AQAFAAAAAAD///n/AQAFAAEAAAD///r/AQAFAAIAAAAAAPj/AQAGAAAAAAAAAPn/AQAGAAEAAAAAAPr/AQAGAAIAAAAMAP7/AQAEAAAAAAAMAP//AQAEAAEAAAAHAPv/AQAEAAIAAAABAPv/AQACAAIAAAAGAPn/AQACAAIAAAA=")
 tile_set = SubResource("TileSet_6iyac")
+
+[node name="Lift" parent="." instance=ExtResource("11_d1ilt")]
+position = Vector2(29, -201)
+target = Vector2(29, -143)
+time = 2.0
+lift_id = 1
