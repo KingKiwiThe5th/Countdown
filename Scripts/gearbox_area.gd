@@ -21,6 +21,10 @@ func _process(delta: float) -> void:
 			get_parent().full = true
 			full = true
 			label.visible = false
+		var gear = player.gears.pop_front()
+		player.hasGear = !player.gears.is_empty()
+		if is_instance_valid(gear):
+			gear.consume()
 
 func _on_body_entered(body: Node2D) -> void:
 	# checking valid terms for the player

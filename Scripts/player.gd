@@ -54,5 +54,6 @@ func _physics_process(delta: float) -> void:
 
 func die():
 	print("you died")
+	velocity.y = 0
 	position = base_position
 	LevelReset.reset_gears = true
