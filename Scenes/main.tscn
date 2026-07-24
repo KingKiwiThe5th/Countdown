@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://8utghou5n8e1"]
+[gd_scene load_steps=26 format=4 uid="uid://8utghou5n8e1"]
 
 [ext_resource type="Texture2D" uid="uid://cff4ws34kg5oy" path="res://Assets/walls.png" id="1_6iyac"]
 [ext_resource type="Texture2D" uid="uid://bclfbqtkdyrep" path="res://Assets/tilemaptemplate (1).png" id="2_8gbba"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bgr43tea8nujl" path="res://Assets/background_assets/backgroundAssets.png" id="10_hptm8"]
 [ext_resource type="PackedScene" uid="uid://cqmeov0x16lyn" path="res://Scenes/lift.tscn" id="11_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://dxq33cuvlwhfv" path="res://Scenes/Killzone.tscn" id="14_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://euf6r2hrsxki" path="res://Scenes/smasher.tscn" id="15_wsu2k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fdnlq"]
 texture = ExtResource("1_6iyac")
@@ -136,7 +137,7 @@ sources/1 = SubResource("TileSetAtlasSource_b3802")
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_8gbba")
 format = 2
-layer_0/tile_data = PackedInt32Array(65533, 65538, 0, 65535, 65538, 0, 0, 65538, 0, 1, 65538, 0, 2, 65538, 0, 3, 65538, 0, 4, 65538, 0, 5, 65538, 0, 6, 65538, 0, 7, 65538, 0, 8, 65538, 0, 9, 65538, 0, 10, 65538, 0, 11, 65538, 0, 12, 65538, 0, -262149, 2, 0, -262148, 65538, 0, -262147, 65538, 0, -262146, 65538, 0, -262145, 131074, 0, -196603, 2, 0, -196602, 65538, 0, -196601, 65538, 0, -196600, 131074, 0, -589819, 2, 0, -589818, 65538, 0, -589817, 65538, 0, -589816, 131074, 0, 65534, 65538, 0, 65531, 2, 0, 65532, 65538, 0, -589823, 5, 0, -589821, 131077, 0, -655359, 5, 0, -655357, 131077, 0, -720895, 5, 0, -720893, 131077, 0, -786431, 5, 0, -786429, 131077, 0, -851967, 5, 0, -851965, 131077, 0, -655346, 0, 0, -589810, 0, 1, -524274, 0, 1, -458738, 0, 1, -393202, 0, 1, -327666, 0, 1, -262130, 0, 1, -196594, 0, 1, -131058, 0, 1, -65522, 0, 1, 14, 0, 2, 13, 131074, 0)
+layer_0/tile_data = PackedInt32Array(65533, 65538, 0, 65535, 65538, 0, 0, 65538, 0, 1, 65538, 0, 2, 65538, 0, 3, 65538, 0, 4, 65538, 0, 5, 65538, 0, 6, 65538, 0, 7, 65538, 0, 8, 65538, 0, 12, 65538, 0, -262149, 2, 0, -262148, 65538, 0, -262147, 65538, 0, -262146, 65538, 0, -262145, 131074, 0, -196603, 2, 0, -196602, 65538, 0, -196601, 65538, 0, -196600, 131074, 0, -589819, 2, 0, -589818, 65538, 0, -589817, 65538, 0, -589816, 131074, 0, 65534, 65538, 0, 65531, 2, 0, 65532, 65538, 0, -589823, 5, 0, -589821, 131077, 0, -655359, 5, 0, -655357, 131077, 0, -720895, 5, 0, -720893, 131077, 0, -786431, 5, 0, -786429, 131077, 0, -851967, 5, 0, -851965, 131077, 0, -655346, 0, 0, -589810, 0, 1, -524274, 0, 1, -458738, 0, 1, -393202, 0, 1, -327666, 0, 1, -262130, 0, 1, -196594, 0, 1, -131058, 0, 1, -65522, 0, 1, 14, 0, 1, 13, 131074, 0, 9, 131074, 0, 11, 2, 0, 65550, 0, 1, 131086, 0, 1, 196622, 0, 1, 262158, 0, 1, 327694, 0, 1, 393230, 0, 1, 458766, 0, 1, 851981, 131074, 0, 917499, 2, 0, 917500, 65538, 0, 917501, 65538, 0, 917502, 65538, 0, 917503, 65538, 0, 851968, 65538, 0, 851969, 65538, 0, 851970, 65538, 0, 851971, 65538, 0, 851972, 65538, 0, 851973, 65538, 0, 851974, 65538, 0, 851975, 65538, 0, 851976, 65538, 0, 851977, 65538, 0, 851978, 65538, 0, 851979, 65538, 0, 851980, 65538, 0, 524302, 0, 1, 589838, 0, 1, 655374, 0, 1, 720910, 0, 1, 786446, 0, 1, 851982, 0, 1, 917518, 0, 2)
 layer_1/name = "background"
 layer_1/z_index = -20
 
@@ -231,3 +232,6 @@ position = Vector2(-54, 60)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
 shape = SubResource("WorldBoundaryShape2D_jkdf5")
+
+[node name="Smasher" parent="." instance=ExtResource("15_wsu2k")]
+position = Vector2(130, 39)
