@@ -80,9 +80,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3yhjx"]
-size = Vector2(48, 47)
+size = Vector2(37, 33)
 
 [sub_resource type="FontFile" id="FontFile_bs77s"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/10/0/ascent = 0.0
 cache/0/10/0/descent = 0.0
 cache/0/10/0/underline_position = 0.0
@@ -128,6 +131,7 @@ autoplay = "empty"
 script = ExtResource("5_bs77s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 1.5)
 shape = SubResource("RectangleShape2D_3yhjx")
 debug_color = Color(1.01075e-06, 0.531399, 1.05888e-06, 0.419608)
 

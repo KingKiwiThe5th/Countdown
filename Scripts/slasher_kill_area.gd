@@ -26,12 +26,6 @@ func _on_body_entered(body: Node2D) -> void:
 	#if collider:
 		#collider.set_deferred("disabled", true)
 	#
-	## Make hazards smile (if you want to keep this feature)
-	#var robots = get_tree().get_nodes_in_group("Hazards")
-	#for robot in robots:
-		#if robot.has_method("smile"):
-			#robot.smile()
-	#
 	## Freeze time and stop player movement BUT KEEP VISIBLE
 	#Engine.time_scale = 0.25
 	#if shrinky:

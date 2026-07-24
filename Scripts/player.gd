@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var base_position :Vector2 = position
 @onready var animation: AnimatedSprite2D = $Animation
+@onready var time_label: Label = $CanvasLayer/Time_label
 
 # Constants for movement physics
 const SPEED = 100.0
@@ -48,7 +49,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, direction * SPEED, ACCELERATION)
 	else:
 		velocity.x = move_toward(velocity.x, 0, DECELERATION)
-
+	
+	# set the time on the label
+	time_label.text = "Time: " + str(Countdown.countdown_time)
+	
 	# Execute the movement and handle collisions
 	move_and_slide()
 
@@ -56,4 +60,12 @@ func die():
 	print("you died")
 	velocity.y = 0
 	position = base_position
+	for gear in gears:
+		if is_instance_valid(gear):
+			gear.reset()
+	gears.clear()
+	hasGear = false
 	LevelReset.reset_gears = true
+
+func _on_timer_timeout() -> void:
+	Countdown.countdown_time -= 1

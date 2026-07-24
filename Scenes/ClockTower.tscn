@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bc1mi3hs1qipu"]
+[gd_scene load_steps=23 format=3 uid="uid://bc1mi3hs1qipu"]
 
 [ext_resource type="Texture2D" uid="uid://cff4ws34kg5oy" path="res://Assets/walls.png" id="1_fd204"]
 [ext_resource type="Texture2D" uid="uid://bclfbqtkdyrep" path="res://Assets/tilemaptemplate (1).png" id="2_ss7yt"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c7vy06vv3n7ke" path="res://Scenes/slasher.tscn" id="11_f8ig0"]
 [ext_resource type="PackedScene" uid="uid://c61tyqnqt7f0w" path="res://Scenes/gearbox.tscn" id="12_mtnw1"]
 [ext_resource type="PackedScene" uid="uid://cqmeov0x16lyn" path="res://Scenes/lift.tscn" id="13_dwl4x"]
+[ext_resource type="PackedScene" uid="uid://bc80h4hu485dn" path="res://Scenes/countdown_button.tscn" id="14_f8ig0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jsfso"]
 texture = ExtResource("1_fd204")
@@ -171,26 +172,32 @@ tile_set = SubResource("TileSet_jsfso")
 position = Vector2(160, 90)
 
 [node name="Ladder" parent="." instance=ExtResource("9_jsfso")]
+z_index = 0
 position = Vector2(86, 72)
 
 [node name="Ladder2" parent="." instance=ExtResource("9_jsfso")]
+z_index = 0
 position = Vector2(86, 104)
 type = 2
 
 [node name="Ladder3" parent="." instance=ExtResource("9_jsfso")]
+z_index = 0
 position = Vector2(86, 88)
 type = 1
 
 [node name="Gear" parent="." instance=ExtResource("10_kp56b")]
+z_index = 0
 position = Vector2(34, 50)
 
 [node name="Gear2" parent="." instance=ExtResource("10_kp56b")]
+z_index = 0
 position = Vector2(274, 136)
 
 [node name="Slasher" parent="." instance=ExtResource("11_f8ig0")]
 position = Vector2(50, 144)
 
 [node name="Gear3" parent="." instance=ExtResource("10_kp56b")]
+z_index = 0
 position = Vector2(263, -14)
 
 [node name="Gearbox" parent="." instance=ExtResource("12_mtnw1")]
@@ -203,3 +210,6 @@ position = Vector2(200, -114)
 target = Vector2(200, -37)
 time = 2.0
 lift_id = 1
+
+[node name="CountdownButton" parent="." instance=ExtResource("14_f8ig0")]
+position = Vector2(80, -144)

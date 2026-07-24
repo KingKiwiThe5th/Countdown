@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://8utghou5n8e1"]
+[gd_scene load_steps=25 format=4 uid="uid://8utghou5n8e1"]
 
 [ext_resource type="Texture2D" uid="uid://cff4ws34kg5oy" path="res://Assets/walls.png" id="1_6iyac"]
 [ext_resource type="Texture2D" uid="uid://bclfbqtkdyrep" path="res://Assets/tilemaptemplate (1).png" id="2_8gbba"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dlt2oiv5m6xdd" path="res://Assets/background_assets/backgroundBricksLarge.png" id="9_ynf5e"]
 [ext_resource type="Texture2D" uid="uid://bgr43tea8nujl" path="res://Assets/background_assets/backgroundAssets.png" id="10_hptm8"]
 [ext_resource type="PackedScene" uid="uid://cqmeov0x16lyn" path="res://Scenes/lift.tscn" id="11_d1ilt"]
+[ext_resource type="PackedScene" uid="uid://dxq33cuvlwhfv" path="res://Scenes/Killzone.tscn" id="14_jkdf5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fdnlq"]
 texture = ExtResource("1_6iyac")
@@ -128,6 +129,8 @@ texture = ExtResource("10_hptm8")
 [sub_resource type="TileSet" id="TileSet_6iyac"]
 sources/1 = SubResource("TileSetAtlasSource_b3802")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jkdf5"]
+
 [node name="Main" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -148,24 +151,30 @@ one_way_collision_margin = 0.0
 
 [node name="Gear" parent="." instance=ExtResource("4_jjvhh")]
 visibility_layer = 1
+z_index = 0
 position = Vector2(203, -62)
 
 [node name="Gear2" parent="." instance=ExtResource("4_jjvhh")]
 visibility_layer = 1
+z_index = 0
 position = Vector2(-16, -33)
 
 [node name="Gear3" parent="." instance=ExtResource("4_jjvhh")]
 visibility_layer = 1
+z_index = 0
 position = Vector2(136, -106)
 
 [node name="Ladder" parent="." instance=ExtResource("5_kry3j")]
+z_index = 0
 position = Vector2(72, -136)
 
 [node name="Ladder2" parent="." instance=ExtResource("5_kry3j")]
+z_index = 0
 position = Vector2(72, -120)
 type = 1
 
 [node name="Ladder3" parent="." instance=ExtResource("5_kry3j")]
+z_index = 0
 position = Vector2(72, -104)
 type = 2
 
@@ -216,3 +225,9 @@ z_as_relative = false
 position = Vector2(0, -4)
 tile_map_data = PackedByteArray("AAACAPz/AQAAAAAAAAACAP3/AQAAAAEAAAACAP7/AQAAAAIAAAADAPz/AQABAAAAAAADAP3/AQABAAEAAAADAP7/AQABAAIAAAALAP3/AQADAAIAAAD8//3/AQACAAEAAAD9//3/AQADAAEAAAAIAPv/AQACAAAAAAAJAPv/AQADAAAAAAD///j/AQAFAAAAAAD///n/AQAFAAEAAAD///r/AQAFAAIAAAAAAPj/AQAGAAAAAAAAAPn/AQAGAAEAAAAAAPr/AQAGAAIAAAAMAP7/AQAEAAAAAAAMAP//AQAEAAEAAAAHAPv/AQAEAAIAAAABAPv/AQACAAIAAAAGAPn/AQACAAIAAAA=")
 tile_set = SubResource("TileSet_6iyac")
+
+[node name="KillZone" parent="." instance=ExtResource("14_jkdf5")]
+position = Vector2(-54, 60)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+shape = SubResource("WorldBoundaryShape2D_jkdf5")

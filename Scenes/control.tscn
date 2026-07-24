@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://evy2lpil4a76"]
+[gd_scene load_steps=6 format=3 uid="uid://bfje4gdjojlur"]
 
 [ext_resource type="Texture2D" uid="uid://c0wu1p3y3u61a" path="res://Assets/startArt.jpg" id="1_cgmvo"]
 [ext_resource type="FontFile" uid="uid://b20ymth1saaq7" path="res://Assets/fonts/alagard.ttf" id="2_vh8u0"]
@@ -9,6 +9,9 @@ font = ExtResource("2_vh8u0")
 font_color = Color(0.77, 0.59752, 0.3388, 1)
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vh8u0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -44,4 +47,5 @@ offset_bottom = 67.0
 grow_vertical = 2
 theme = ExtResource("3_vh8u0")
 theme_override_fonts/font = ExtResource("2_vh8u0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vh8u0")
 text = "Start Climb"
