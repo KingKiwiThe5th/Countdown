@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://dwlp3h7xxs7me"]
+[gd_scene load_steps=22 format=3 uid="uid://dwlp3h7xxs7me"]
 
 [ext_resource type="Script" uid="uid://wrs7jhmfh8lm" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://fj4rossy466n" path="res://Assets/felicityAnimations-Sheet.png" id="2_cvnsp"]
+[ext_resource type="Script" uid="uid://ugvoq25ruvb5" path="res://Scripts/camera.gd" id="3_6t5aa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_cvnsp")
@@ -158,3 +159,6 @@ position = Vector2(-0.375, 3.75)
 shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+script = ExtResource("3_6t5aa")
