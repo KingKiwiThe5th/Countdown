@@ -8,5 +8,5 @@ var used = false
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player" and !used:
 		used = true
-		# anim.play("active") - when we have the asset
+		anim.play("activated")
 		Countdown.countdown_reset(countdown_time)

@@ -1,0 +1,158 @@
+[gd_scene load_steps=17 format=3 uid="uid://euf6r2hrsxki"]
+
+[ext_resource type="Texture2D" uid="uid://c2f213s30175w" path="res://Assets/Smasher-Sheet.png" id="1_4r1hg"]
+[ext_resource type="Script" uid="uid://bkb3cvabidfum" path="res://Scenes/smasher.gd" id="1_t14s7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t14s7"]
+atlas = ExtResource("1_4r1hg")
+region = Rect2(432, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_as0be"]
+atlas = ExtResource("1_4r1hg")
+region = Rect2(480, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ft03"]
+atlas = ExtResource("1_4r1hg")
+region = Rect2(528, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eprd7"]
+atlas = ExtResource("1_4r1hg")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxg4o"]
+atlas = ExtResource("1_4r1hg")
+region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkhin"]
+atlas = ExtResource("1_4r1hg")
+region = Rect2(384, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icy6f"]
+atlas = ExtResource("1_4r1hg")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijund"]
+atlas = ExtResource("1_4r1hg")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ib7m"]
+atlas = ExtResource("1_4r1hg")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84vgw"]
+atlas = ExtResource("1_4r1hg")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecov0"]
+atlas = ExtResource("1_4r1hg")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cg1m"]
+atlas = ExtResource("1_4r1hg")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gyj04"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t14s7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_as0be")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ft03")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eprd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxg4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkhin")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icy6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijund")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ib7m")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84vgw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecov0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cg1m")
+}],
+"loop": true,
+"name": &"pre_jump",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"tracking",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"tracking-jump",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"tracking_fall",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"tracking_pre_jump",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4kqpw"]
+radius = 16.0312
+
+[node name="Smasher" type="CharacterBody2D"]
+script = ExtResource("1_t14s7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gyj04")
+animation = &"normal"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 5)
+shape = SubResource("CircleShape2D_4kqpw")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(-62, 0)
+
+[node name="groundRayCast" type="RayCast2D" parent="."]
+target_position = Vector2(-113, 23)
+
+[node name="patrolTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="wallRayCast" type="RayCast2D" parent="."]
+target_position = Vector2(-37, 0)
