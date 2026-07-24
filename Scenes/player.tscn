@@ -158,6 +158,7 @@ shadow_color = Color(0, 0, 0, 1)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 100
+collision_layer = 2
 script = ExtResource("1_cvnsp")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]

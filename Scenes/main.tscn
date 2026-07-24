@@ -184,7 +184,6 @@ position = Vector2(24, -16)
 
 [node name="Gearbox" parent="." instance=ExtResource("8_344ge")]
 position = Vector2(-32, -96)
-direction = 1
 corresponding_lift_id = 1
 
 [node name="Lift" parent="." instance=ExtResource("11_d1ilt")]
@@ -231,6 +230,7 @@ tile_set = SubResource("TileSet_6iyac")
 position = Vector2(-54, 60)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldKillZone"]
+position = Vector2(-10, 217)
 shape = SubResource("WorldBoundaryShape2D_jkdf5")
 
 [node name="Smasher" parent="." instance=ExtResource("15_wsu2k")]
