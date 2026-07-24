@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://c7vy06vv3n7ke"]
 
-[ext_resource type="Script" uid="uid://dds3suhbapnv8" path="res://Scripts/slasher.gd" id="1_25uws"]
+[ext_resource type="Script" path="res://Scripts/slasher.gd" id="1_25uws"]
 [ext_resource type="Texture2D" uid="uid://ci5vp8tpcp0kk" path="res://Assets/Slasher-Sheet.png" id="2_45s1m"]
 [ext_resource type="Script" uid="uid://020lvyrexlbu" path="res://Scripts/slasher_kill_area.gd" id="3_45s1m"]
 
