@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://wrs7jhmfh8lm" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://fj4rossy466n" path="res://Assets/felicityAnimations-Sheet.png" id="2_cvnsp"]
 [ext_resource type="Script" uid="uid://ugvoq25ruvb5" path="res://Scripts/camera.gd" id="3_6t5aa"]
+[ext_resource type="FontFile" uid="uid://b20ymth1saaq7" path="res://Assets/fonts/alagard.ttf" id="4_vgqql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_cvnsp")
@@ -147,60 +148,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
 size = Vector2(11.25, 23.5)
 
-[sub_resource type="FontFile" id="FontFile_6t5aa"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/15/0/ascent = 0.0
-cache/0/15/0/descent = 0.0
-cache/0/15/0/underline_position = 0.0
-cache/0/15/0/underline_thickness = 0.0
-cache/0/15/0/scale = 1.0
-cache/0/14/0/ascent = 0.0
-cache/0/14/0/descent = 0.0
-cache/0/14/0/underline_position = 0.0
-cache/0/14/0/underline_thickness = 0.0
-cache/0/14/0/scale = 1.0
-cache/0/13/0/ascent = 0.0
-cache/0/13/0/descent = 0.0
-cache/0/13/0/underline_position = 0.0
-cache/0/13/0/underline_thickness = 0.0
-cache/0/13/0/scale = 1.0
-cache/0/12/0/ascent = 0.0
-cache/0/12/0/descent = 0.0
-cache/0/12/0/underline_position = 0.0
-cache/0/12/0/underline_thickness = 0.0
-cache/0/12/0/scale = 1.0
-cache/0/11/0/ascent = 0.0
-cache/0/11/0/descent = 0.0
-cache/0/11/0/underline_position = 0.0
-cache/0/11/0/underline_thickness = 0.0
-cache/0/11/0/scale = 1.0
-cache/0/10/0/ascent = 0.0
-cache/0/10/0/descent = 0.0
-cache/0/10/0/underline_position = 0.0
-cache/0/10/0/underline_thickness = 0.0
-cache/0/10/0/scale = 1.0
-cache/0/9/0/ascent = 0.0
-cache/0/9/0/descent = 0.0
-cache/0/9/0/underline_position = 0.0
-cache/0/9/0/underline_thickness = 0.0
-cache/0/9/0/scale = 1.0
-cache/0/8/0/ascent = 0.0
-cache/0/8/0/descent = 0.0
-cache/0/8/0/underline_position = 0.0
-cache/0/8/0/underline_thickness = 0.0
-cache/0/8/0/scale = 1.0
-cache/0/7/0/ascent = 0.0
-cache/0/7/0/descent = 0.0
-cache/0/7/0/underline_position = 0.0
-cache/0/7/0/underline_thickness = 0.0
-cache/0/7/0/scale = 1.0
-
 [sub_resource type="LabelSettings" id="LabelSettings_vgqql"]
-font = SubResource("FontFile_6t5aa")
+font = ExtResource("4_vgqql")
 font_size = 10
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
