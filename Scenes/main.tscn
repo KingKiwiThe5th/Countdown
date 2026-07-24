@@ -226,8 +226,8 @@ position = Vector2(0, -4)
 tile_map_data = PackedByteArray("AAACAPz/AQAAAAAAAAACAP3/AQAAAAEAAAACAP7/AQAAAAIAAAADAPz/AQABAAAAAAADAP3/AQABAAEAAAADAP7/AQABAAIAAAALAP3/AQADAAIAAAD8//3/AQACAAEAAAD9//3/AQADAAEAAAAIAPv/AQACAAAAAAAJAPv/AQADAAAAAAD///j/AQAFAAAAAAD///n/AQAFAAEAAAD///r/AQAFAAIAAAAAAPj/AQAGAAAAAAAAAPn/AQAGAAEAAAAAAPr/AQAGAAIAAAAMAP7/AQAEAAAAAAAMAP//AQAEAAEAAAAHAPv/AQAEAAIAAAABAPv/AQACAAIAAAAGAPn/AQACAAIAAAA=")
 tile_set = SubResource("TileSet_6iyac")
 
-[node name="KillZone" parent="." instance=ExtResource("14_jkdf5")]
+[node name="WorldKillZone" parent="." instance=ExtResource("14_jkdf5")]
 position = Vector2(-54, 60)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldKillZone"]
 shape = SubResource("WorldBoundaryShape2D_jkdf5")
