@@ -1,5 +1,6 @@
-[gd_scene load_steps=19 format=4 uid="uid://8utghou5n8e1"]
+[gd_scene load_steps=21 format=4 uid="uid://8utghou5n8e1"]
 
+[ext_resource type="Texture2D" uid="uid://cff4ws34kg5oy" path="res://Assets/walls.png" id="1_6iyac"]
 [ext_resource type="Texture2D" uid="uid://bclfbqtkdyrep" path="res://Assets/tilemaptemplate (1).png" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dwlp3h7xxs7me" path="res://Scenes/player.tscn" id="2_bo1nx"]
 [ext_resource type="Texture2D" uid="uid://2aa0y4f4pjw3" path="res://Assets/scaffold.png" id="2_jjvhh"]
@@ -11,6 +12,15 @@
 [ext_resource type="Texture2D" uid="uid://dlt2oiv5m6xdd" path="res://Assets/background_assets/backgroundBricksLarge.png" id="9_ynf5e"]
 [ext_resource type="Texture2D" uid="uid://bgr43tea8nujl" path="res://Assets/background_assets/backgroundAssets.png" id="10_hptm8"]
 [ext_resource type="PackedScene" uid="uid://cqmeov0x16lyn" path="res://Scenes/lift.tscn" id="11_d1ilt"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fdnlq"]
+texture = ExtResource("1_6iyac")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jjvhh"]
 texture = ExtResource("2_8gbba")
@@ -67,6 +77,7 @@ physics_layer_0/collision_mask = 3
 sources/1 = SubResource("TileSetAtlasSource_jjvhh")
 sources/2 = SubResource("TileSetAtlasSource_kry3j")
 sources/3 = SubResource("TileSetAtlasSource_344ge")
+sources/0 = SubResource("TileSetAtlasSource_fdnlq")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjvhh"]
 normal = Vector2(0, 1)
@@ -115,7 +126,7 @@ sources/1 = SubResource("TileSetAtlasSource_d1ilt")
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_8gbba")
 format = 2
-layer_0/tile_data = PackedInt32Array(65533, 65538, 0, 65535, 65538, 0, 0, 65538, 0, 1, 65538, 0, 2, 65538, 0, 3, 65538, 0, 4, 65538, 0, 5, 65538, 0, 6, 65538, 0, 7, 65538, 0, 8, 65538, 0, 9, 65538, 0, 10, 65538, 0, 11, 65538, 0, 12, 131074, 0, -262149, 2, 0, -262148, 65538, 0, -262147, 65538, 0, -262146, 65538, 0, -262145, 131074, 0, -196603, 2, 0, -196602, 65538, 0, -196601, 65538, 0, -196600, 131074, 0, -589819, 2, 0, -589818, 65538, 0, -589817, 65538, 0, -589816, 131074, 0, 65534, 65538, 0, 65531, 2, 0, 65532, 65538, 0)
+layer_0/tile_data = PackedInt32Array(65533, 65538, 0, 65535, 65538, 0, 0, 65538, 0, 1, 65538, 0, 2, 65538, 0, 3, 65538, 0, 4, 65538, 0, 5, 65538, 0, 6, 65538, 0, 7, 65538, 0, 8, 65538, 0, 9, 65538, 0, 10, 65538, 0, 11, 65538, 0, 12, 131074, 0, -262149, 2, 0, -262148, 65538, 0, -262147, 65538, 0, -262146, 65538, 0, -262145, 131074, 0, -196603, 2, 0, -196602, 65538, 0, -196601, 65538, 0, -196600, 131074, 0, -589819, 2, 0, -589818, 65538, 0, -589817, 65538, 0, -589816, 131074, 0, 65534, 65538, 0, 65531, 2, 0, 65532, 65538, 0, 13, 0, 1, -65523, 0, 1, -131059, 0, 1, -196595, 0, 1, -262131, 0, 1, -327667, 0, 1, -393203, 0, 1, -458739, 0, 1, -524275, 0, 0, 65549, 0, 2)
 layer_1/name = "background"
 layer_1/z_index = -20
 
