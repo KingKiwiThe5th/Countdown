@@ -143,6 +143,7 @@ sprite_frames = SubResource("SpriteFrames_hjrfk")
 
 [node name="RayCast_toPlayer" type="RayCast2D" parent="."]
 target_position = Vector2(-78, 0)
+collision_mask = 2
 
 [node name="RayCast_floor" type="RayCast2D" parent="."]
 target_position = Vector2(-17, 18)

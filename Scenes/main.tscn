@@ -230,6 +230,7 @@ tile_set = SubResource("TileSet_6iyac")
 position = Vector2(-54, 60)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldKillZone"]
+position = Vector2(-10, 217)
 shape = SubResource("WorldBoundaryShape2D_jkdf5")
 
 [node name="Smasher" parent="." instance=ExtResource("15_wsu2k")]
