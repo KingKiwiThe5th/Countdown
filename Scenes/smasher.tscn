@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=3 uid="uid://euf6r2hrsxki"]
 
 [ext_resource type="Texture2D" uid="uid://c2f213s30175w" path="res://Assets/Smasher-Sheet.png" id="1_4r1hg"]
-[ext_resource type="Script" path="res://Scenes/smasher.gd" id="1_t14s7"]
+[ext_resource type="Script" uid="uid://bkb3cvabidfum" path="res://Scenes/smasher.gd" id="1_t14s7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t14s7"]
 atlas = ExtResource("1_4r1hg")
