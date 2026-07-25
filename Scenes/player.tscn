@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://dwlp3h7xxs7me"]
+[gd_scene load_steps=29 format=3 uid="uid://dwlp3h7xxs7me"]
 
 [ext_resource type="Script" uid="uid://wrs7jhmfh8lm" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://fj4rossy466n" path="res://Assets/felicityAnimations-Sheet.png" id="2_cvnsp"]
 [ext_resource type="Script" uid="uid://ugvoq25ruvb5" path="res://Scripts/camera.gd" id="3_6t5aa"]
 [ext_resource type="FontFile" uid="uid://b20ymth1saaq7" path="res://Assets/fonts/alagard.ttf" id="4_vgqql"]
 [ext_resource type="Theme" uid="uid://b3l4h3hksieag" path="res://themes/menus_theme.tres" id="5_fkybt"]
+[ext_resource type="Script" uid="uid://c3d3lag4cb0c4" path="res://Scripts/game_over_screen.gd" id="5_x3wgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_cvnsp")
@@ -201,6 +202,7 @@ autostart = true
 
 [node name="game_over_screen" type="CanvasLayer" parent="."]
 visible = false
+script = ExtResource("5_x3wgy")
 
 [node name="ColorRect" type="ColorRect" parent="game_over_screen"]
 anchors_preset = 15
@@ -236,7 +238,7 @@ theme_override_font_sizes/font_size = 13
 theme_override_styles/focus = SubResource("StyleBoxEmpty_fkybt")
 text = "Main Menu"
 
-[node name="Button" type="Button" parent="game_over_screen"]
+[node name="play_again" type="Button" parent="game_over_screen"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -255,3 +257,5 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_x3wgy")
 text = "Play Again"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="game_over_screen/main_menu" to="game_over_screen" method="_on_main_menu_pressed"]
+[connection signal="pressed" from="game_over_screen/play_again" to="game_over_screen" method="_on_play_again_pressed"]

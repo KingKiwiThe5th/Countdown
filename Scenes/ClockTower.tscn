@@ -171,7 +171,6 @@ tile_set = SubResource("TileSet_jsfso")
 
 [node name="Player" parent="." instance=ExtResource("8_cq6p4")]
 position = Vector2(160, 90)
-collision_layer = 1
 
 [node name="Ladder" parent="." instance=ExtResource("9_jsfso")]
 z_index = 0

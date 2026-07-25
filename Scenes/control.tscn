@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfje4gdjojlur"]
+[gd_scene load_steps=7 format=3 uid="uid://bfje4gdjojlur"]
 
 [ext_resource type="Texture2D" uid="uid://c0wu1p3y3u61a" path="res://Assets/startArt.jpg" id="1_cgmvo"]
+[ext_resource type="Script" uid="uid://2xte03chj22s" path="res://Scripts/main_menu.gd" id="1_wpaqk"]
 [ext_resource type="FontFile" uid="uid://b20ymth1saaq7" path="res://Assets/fonts/alagard.ttf" id="2_vh8u0"]
 [ext_resource type="Theme" uid="uid://b3l4h3hksieag" path="res://themes/menus_theme.tres" id="3_vh8u0"]
 
@@ -20,6 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wpaqk")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -38,7 +40,7 @@ scale = Vector2(1.7, 1.7)
 text = "Game Name Here"
 label_settings = SubResource("LabelSettings_wpaqk")
 
-[node name="Button" type="Button" parent="."]
+[node name="Start_button" type="Button" parent="."]
 layout_mode = 2
 offset_left = 10.0
 offset_top = 44.0
@@ -49,3 +51,5 @@ theme = ExtResource("3_vh8u0")
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_styles/focus = SubResource("StyleBoxFlat_vh8u0")
 text = "Start Climb"
+
+[connection signal="pressed" from="Start_button" to="." method="_on_start_button_pressed"]
