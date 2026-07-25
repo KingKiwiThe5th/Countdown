@@ -29,6 +29,8 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 	if Input.is_action_just_released("jump") and velocity.y < JUMP_VELOCITY/2:
 		velocity.y = JUMP_VELOCITY/2
+	if Input.is_action_just_pressed("dialogueTest"):
+		Dialogic.start("timeline")
 
 	# Get the input direction: -1 (left), 1 (right), or 0 (none)
 	var direction := Input.get_axis("left", "right")
