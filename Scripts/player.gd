@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var base_position :Vector2 = position
 @onready var animation: AnimatedSprite2D = $Animation
 @onready var time_label: Label = $CanvasLayer/Time_label
+@onready var game_over_screen: CanvasLayer = $game_over_screen
 
 # Constants for movement physics
 const SPEED = 100.0
@@ -68,4 +69,7 @@ func die():
 	LevelReset.reset_gears = true
 
 func _on_timer_timeout() -> void:
-	Countdown.countdown_time -= 1
+	if Countdown.countdown_time > 0:
+		Countdown.countdown_time -= 1
+	else:
+		game_over_screen.visible = true

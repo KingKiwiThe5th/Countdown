@@ -65,7 +65,7 @@ offset_left = -25.0
 offset_top = -25.0
 offset_right = 33.0
 offset_bottom = -11.0
-text = "-5 seconds"
+text = "-3 seconds"
 label_settings = SubResource("LabelSettings_j3wjn")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

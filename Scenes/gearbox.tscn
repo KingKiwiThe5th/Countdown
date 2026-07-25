@@ -124,7 +124,7 @@ script = ExtResource("1_b8ojb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hv30x")
-animation = &"one"
+animation = &"empty"
 autoplay = "empty"
 
 [node name="Area2D" type="Area2D" parent="."]

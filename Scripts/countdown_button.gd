@@ -15,7 +15,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			Countdown.countdown_reset(countdown_time)
 		else:
 			anim.play("activated_bad")
-			Countdown.countdown_time -= 5
+			Countdown.countdown_time -= 3
 			bad_label.visible = true
 			var tween = create_tween()
 			tween.tween_property(bad_label,"modulate:a",0.0,1.0)
