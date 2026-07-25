@@ -184,7 +184,6 @@ position = Vector2(24, -16)
 
 [node name="Gearbox" parent="." instance=ExtResource("8_344ge")]
 position = Vector2(-32, -96)
-direction = 1
 corresponding_lift_id = 1
 
 [node name="Lift" parent="." instance=ExtResource("11_d1ilt")]

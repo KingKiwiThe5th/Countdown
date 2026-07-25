@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bc80h4hu485dn"]
+[gd_scene load_steps=10 format=3 uid="uid://bc80h4hu485dn"]
 
 [ext_resource type="Script" uid="uid://rlb21qe57iju" path="res://Scripts/countdown_button.gd" id="1_iea27"]
 [ext_resource type="Texture2D" uid="uid://b01y85icc21xg" path="res://Assets/buttonTexture.png" id="1_qfrdj"]
 [ext_resource type="Texture2D" uid="uid://c7a8xuhq70omb" path="res://Assets/activated_time_button.png" id="2_a1e6j"]
+[ext_resource type="Texture2D" uid="uid://cg3myc7fl3aum" path="res://Assets/activated_time_button-bad.png" id="3_j3wjn"]
+[ext_resource type="FontFile" uid="uid://b20ymth1saaq7" path="res://Assets/fonts/alagard.ttf" id="5_qmq07"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iea27"]
 atlas = ExtResource("1_qfrdj")
@@ -20,6 +22,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("3_j3wjn")
+}],
+"loop": true,
+"name": &"activated_bad",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_iea27")
 }],
 "loop": true,
@@ -29,19 +39,33 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a1e6j"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_j3wjn"]
+font = ExtResource("5_qmq07")
+font_size = 10
+font_color = Color(100, 0, 0, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
 [node name="CountdownButton" type="Node2D"]
 script = ExtResource("1_iea27")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_a1e6j")
-animation = &"activated"
 autoplay = "default"
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-visible = false
 shape = SubResource("RectangleShape2D_a1e6j")
 debug_color = Color(1, 0.454902, 0, 0.337255)
+
+[node name="Bad_label" type="Label" parent="."]
+visible = false
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 33.0
+offset_bottom = -11.0
+text = "-5 seconds"
+label_settings = SubResource("LabelSettings_j3wjn")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
