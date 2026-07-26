@@ -277,13 +277,8 @@ type = "bad"
 countdown_time = 3
 
 [node name="CountdownButton4" parent="." instance=ExtResource("14_f8ig0")]
-<<<<<<< HEAD
 position = Vector2(157, -850)
 countdown_time = 23
-=======
-position = Vector2(232, -830)
-countdown_time = 15
->>>>>>> a944de34c6a0e8056d0ff02d588b1a1f0f32c8e9
 
 [node name="Ladder8" parent="." instance=ExtResource("9_jsfso")]
 position = Vector2(248, -902)
@@ -363,10 +358,9 @@ position = Vector2(265, -1361)
 [node name="Gear15" parent="." instance=ExtResource("10_kp56b")]
 position = Vector2(97, -1531)
 
-<<<<<<< HEAD
 [node name="Slasher3" parent="." instance=ExtResource("11_f8ig0")]
 position = Vector2(75, -926)
-=======
+
 [node name="Ladder18" parent="." instance=ExtResource("9_jsfso")]
 position = Vector2(264, -1432)
 
@@ -397,4 +391,3 @@ type = 1
 [node name="Ladder23" parent="." instance=ExtResource("9_jsfso")]
 position = Vector2(168, -1432)
 type = 2
->>>>>>> a944de34c6a0e8056d0ff02d588b1a1f0f32c8e9
