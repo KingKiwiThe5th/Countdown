@@ -201,6 +201,7 @@ label_settings = SubResource("LabelSettings_vgqql")
 autostart = true
 
 [node name="game_over_screen" type="CanvasLayer" parent="."]
+process_mode = 3
 visible = false
 script = ExtResource("5_x3wgy")
 

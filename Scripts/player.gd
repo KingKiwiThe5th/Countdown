@@ -14,6 +14,8 @@ var facing := 1
 var gears: Array = []
 var hasGear
 
+func _ready() -> void:
+	get_tree().paused = false
 
 func _physics_process(delta: float) -> void:
 	# Add gravity if the character is in the air
@@ -75,3 +77,4 @@ func _on_timer_timeout() -> void:
 		Countdown.countdown_time -= 1
 	else:
 		game_over_screen.visible = true
+		get_tree().paused = true
