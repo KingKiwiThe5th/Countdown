@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var patrol_speed := 100.0
-@export var chase_speed := 150.0
+@export var patrol_speed := 90.0
+@export var chase_speed := 125.0
 
 @onready var player_ray: RayCast2D = $RayCast_toPlayer
 @onready var wall_ray: RayCast2D = $WallRayCast
