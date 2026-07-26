@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://crgofdqjb4hpq" path="res://Assets/LiftTracks1.png" id="5_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://cnju0k7dcg5o0" path="res://Scenes/ladder.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://c7vy06vv3n7ke" path="res://Scenes/slasher.tscn" id="6_21xkr"]
-[ext_resource type="PackedScene" uid="uid://cel3ied8y4aw1" path="res://Scenes/deathscreen.tscn" id="7_k12tt"]
+[ext_resource type="PackedScene" path="res://Scenes/deathscreen.tscn" id="7_k12tt"]
 [ext_resource type="PackedScene" uid="uid://c61tyqnqt7f0w" path="res://Scenes/gearbox.tscn" id="8_344ge"]
 [ext_resource type="Texture2D" uid="uid://dlt2oiv5m6xdd" path="res://Assets/background_assets/backgroundBricksLarge.png" id="9_ynf5e"]
 [ext_resource type="Texture2D" uid="uid://bgr43tea8nujl" path="res://Assets/background_assets/backgroundAssets.png" id="10_hptm8"]
