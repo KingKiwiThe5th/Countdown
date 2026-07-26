@@ -1,0 +1,12 @@
+[signal arg="start"]
+felicia: Finally, the clockroo- Whoa!
+felicia: Is that... the clockmaker?
+clockMaker: Ah. os You've made your way here...
+clockMaker: Prepare to fight, young miss
+clockMaker: Or at least, that's what I would said
+clockMaker: If we had more development time that is
+clockMaker: So for now... Good Job!
+clockMaker: You did it!
+felicia: YAY!!!
+felicia: Ok bye!
+[signal arg="end"]

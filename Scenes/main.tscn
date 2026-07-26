@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://8utghou5n8e1"]
+[gd_scene load_steps=28 format=4 uid="uid://8utghou5n8e1"]
 
 [ext_resource type="Texture2D" uid="uid://cff4ws34kg5oy" path="res://Assets/walls.png" id="1_6iyac"]
 [ext_resource type="Texture2D" uid="uid://bclfbqtkdyrep" path="res://Assets/tilemaptemplate (1).png" id="2_8gbba"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cqmeov0x16lyn" path="res://Scenes/lift.tscn" id="11_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://dxq33cuvlwhfv" path="res://Scenes/Killzone.tscn" id="14_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://euf6r2hrsxki" path="res://Scenes/smasher.tscn" id="15_wsu2k"]
+[ext_resource type="PackedScene" uid="uid://bc721ijjmtvpm" path="res://Scenes/dialogue_trigger.tscn" id="17_h1bgf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fdnlq"]
 texture = ExtResource("1_6iyac")
@@ -252,3 +253,7 @@ position = Vector2(113, 149)
 
 [node name="Ladder6" parent="." instance=ExtResource("5_kry3j")]
 position = Vector2(64, 125)
+
+[node name="DialogueTrigger" parent="." instance=ExtResource("17_h1bgf")]
+position = Vector2(129, -59)
+dialogue_name = "StartDialogue"
