@@ -41,6 +41,7 @@ text = "Game Name Here"
 label_settings = SubResource("LabelSettings_wpaqk")
 
 [node name="Start_button" type="Button" parent="."]
+process_mode = 3
 layout_mode = 2
 offset_left = 10.0
 offset_top = 44.0
