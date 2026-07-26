@@ -25,16 +25,19 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "character": "res://Dialogues/character.dch",
+"character1": "res://Dialogues/character1.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"timeline": "res://Dialogues/timeline.dtl"
+"timeline": "res://Dialogues/timeline.dtl",
+"timeline1": "res://Dialogues/timeline1.dtl"
 }
 layout/style_directory={
 "": "res://Dialogues/StylePremade.tres",
+"New_style": "res://Dialogues/New_style.tres",
 "StylePremade": "res://Dialogues/StylePremade.tres"
 }
-layout/style_list=["res://Dialogues/StylePremade.tres"]
+layout/style_list=["res://Dialogues/StylePremade.tres", "res://Dialogues/New_style.tres"]
 layout/default_style="res://Dialogues/StylePremade.tres"
 variables={}
 text/letter_speed=0.01
