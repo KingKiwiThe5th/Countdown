@@ -273,12 +273,10 @@ position = Vector2(191, -635)
 
 [node name="CountdownButton3" parent="." instance=ExtResource("14_f8ig0")]
 position = Vector2(236, -833)
-type = "bad"
-countdown_time = 3
 
 [node name="CountdownButton4" parent="." instance=ExtResource("14_f8ig0")]
 position = Vector2(157, -850)
-countdown_time = 23
+type = "bad"
 
 [node name="Ladder8" parent="." instance=ExtResource("9_jsfso")]
 position = Vector2(248, -902)

@@ -1,41 +1,41 @@
-[gd_scene load_steps=18 format=3 uid="uid://c61tyqnqt7f0w"]
+[gd_scene load_steps=18 format=3 uid="uid://c2py5ege77h5f"]
 
-[ext_resource type="Script" uid="uid://bufyfneaonpmd" path="res://Scripts/gearbox.gd" id="1_b8ojb"]
-[ext_resource type="Texture2D" uid="uid://chnsgs7vgp0ek" path="res://Assets/gearboxempty.png" id="1_cj3vc"]
-[ext_resource type="Texture2D" uid="uid://db6kyt8at6eb7" path="res://Assets/gearbox full-Sheet.png" id="2_bs77s"]
-[ext_resource type="Texture2D" uid="uid://bu0j5v0uk3d65" path="res://Assets/gearboxone-Sheet.png" id="3_b8ojb"]
-[ext_resource type="Texture2D" uid="uid://c1h5iiytxhtp4" path="res://Assets/gearboxtwo-Sheet.png" id="4_mihil"]
-[ext_resource type="Script" uid="uid://cykjcln6nr2ek" path="res://Scripts/gearbox_area.gd" id="5_bs77s"]
+[ext_resource type="Script" uid="uid://cf6pwycheplbi" path="res://Scripts/room_gearbox.gd" id="1_6ctlp"]
+[ext_resource type="Texture2D" uid="uid://chnsgs7vgp0ek" path="res://Assets/gearboxempty.png" id="2_5ny8h"]
+[ext_resource type="Texture2D" uid="uid://db6kyt8at6eb7" path="res://Assets/gearbox full-Sheet.png" id="3_38dhq"]
+[ext_resource type="Texture2D" uid="uid://bu0j5v0uk3d65" path="res://Assets/gearboxone-Sheet.png" id="4_0lcvn"]
+[ext_resource type="Texture2D" uid="uid://c1h5iiytxhtp4" path="res://Assets/gearboxtwo-Sheet.png" id="5_pjn8q"]
+[ext_resource type="Script" uid="uid://cykjcln6nr2ek" path="res://Scripts/gearbox_area.gd" id="6_dcon6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nek2r"]
-atlas = ExtResource("1_cj3vc")
+atlas = ExtResource("2_5ny8h")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_abl7i"]
-atlas = ExtResource("2_bs77s")
+atlas = ExtResource("3_38dhq")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_brih0"]
-atlas = ExtResource("2_bs77s")
+atlas = ExtResource("3_38dhq")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m5b1x"]
-atlas = ExtResource("3_b8ojb")
+atlas = ExtResource("4_0lcvn")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4h1fy"]
-atlas = ExtResource("3_b8ojb")
+atlas = ExtResource("4_0lcvn")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_syrw8"]
-atlas = ExtResource("4_mihil")
+atlas = ExtResource("5_pjn8q")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ao7mx"]
-atlas = ExtResource("4_mihil")
+atlas = ExtResource("5_pjn8q")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_hv30x"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_kuy0e"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -79,23 +79,23 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3yhjx"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48a30"]
 size = Vector2(37, 33)
 
-[sub_resource type="FontFile" id="FontFile_b8ojb"]
+[sub_resource type="FontFile" id="FontFile_bs77s"]
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
 cache/0/10/0/ascent = 0.0
 cache/0/10/0/descent = 0.0
 cache/0/10/0/underline_position = 0.0
 cache/0/10/0/underline_thickness = 0.0
 cache/0/10/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 cache/0/11/0/ascent = 0.0
 cache/0/11/0/descent = 0.0
 cache/0/11/0/underline_position = 0.0
@@ -112,28 +112,28 @@ cache/0/13/0/underline_position = 0.0
 cache/0/13/0/underline_thickness = 0.0
 cache/0/13/0/scale = 1.0
 
-[sub_resource type="LabelSettings" id="LabelSettings_a8p35"]
-font = SubResource("FontFile_b8ojb")
+[sub_resource type="LabelSettings" id="LabelSettings_ba4no"]
+font = SubResource("FontFile_bs77s")
 font_size = 12
 outline_size = 7
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 2
 
-[node name="Gearbox" type="Node2D"]
-script = ExtResource("1_b8ojb")
+[node name="RoomGearbox" type="Node2D"]
+script = ExtResource("1_6ctlp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_hv30x")
+sprite_frames = SubResource("SpriteFrames_kuy0e")
 animation = &"empty"
 autoplay = "empty"
 
 [node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("5_bs77s")
+script = ExtResource("6_dcon6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-0.5, 1.5)
-shape = SubResource("RectangleShape2D_3yhjx")
-debug_color = Color(1.01075e-06, 0.531399, 1.05888e-06, 0.419608)
+shape = SubResource("RectangleShape2D_48a30")
+debug_color = Color(0.410125, 0.751154, 0.330631, 0.419608)
 
 [node name="PressE" type="Label" parent="Area2D"]
 visible = false
@@ -143,7 +143,7 @@ offset_top = -28.0
 offset_right = 31.0
 offset_bottom = -4.0
 text = "press E"
-label_settings = SubResource("LabelSettings_a8p35")
+label_settings = SubResource("LabelSettings_ba4no")
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 

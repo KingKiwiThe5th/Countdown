@@ -4,9 +4,11 @@ const DEFAULT_TIME = 30
 
 var countdown_time : int = 30
 var lifts: Array = []
+var doors: Array = []
 func countdown_reset(new_time):
 	countdown_time = new_time
 
 func reset():
 	lifts.clear()
+	doors.clear()
 	countdown_time = DEFAULT_TIME
