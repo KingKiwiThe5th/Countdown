@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://8utghou5n8e1"]
+[gd_scene load_steps=27 format=4 uid="uid://8utghou5n8e1"]
 
 [ext_resource type="Texture2D" uid="uid://cff4ws34kg5oy" path="res://Assets/walls.png" id="1_6iyac"]
 [ext_resource type="Texture2D" uid="uid://bclfbqtkdyrep" path="res://Assets/tilemaptemplate (1).png" id="2_8gbba"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://crgofdqjb4hpq" path="res://Assets/LiftTracks1.png" id="5_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://cnju0k7dcg5o0" path="res://Scenes/ladder.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://c7vy06vv3n7ke" path="res://Scenes/slasher.tscn" id="6_21xkr"]
+[ext_resource type="PackedScene" uid="uid://cel3ied8y4aw1" path="res://Scenes/deathscreen.tscn" id="7_k12tt"]
 [ext_resource type="PackedScene" uid="uid://c61tyqnqt7f0w" path="res://Scenes/gearbox.tscn" id="8_344ge"]
 [ext_resource type="Texture2D" uid="uid://dlt2oiv5m6xdd" path="res://Assets/background_assets/backgroundBricksLarge.png" id="9_ynf5e"]
 [ext_resource type="Texture2D" uid="uid://bgr43tea8nujl" path="res://Assets/background_assets/backgroundAssets.png" id="10_hptm8"]
@@ -143,6 +144,12 @@ layer_1/z_index = -20
 
 [node name="Player" parent="." instance=ExtResource("2_bo1nx")]
 position = Vector2(69, -63)
+
+[node name="Deathscreen" parent="Player" instance=ExtResource("7_k12tt")]
+layer = -10
+visible = false
+follow_viewport_enabled = true
+follow_viewport_scale = 5.01
 
 [node name="Area2D" type="Area2D" parent="."]
 

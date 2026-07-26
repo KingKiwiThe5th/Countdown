@@ -20,6 +20,7 @@ config/icon="res://Assets/icon.svg"
 Countdown="*res://Scripts/countdown.gd"
 LevelReset="*res://Scripts/level_reset.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Deathscreen="*res://Scenes/deathscreen.tscn"
 
 [dialogic]
 

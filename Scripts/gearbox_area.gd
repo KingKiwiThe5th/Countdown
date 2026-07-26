@@ -1,5 +1,6 @@
 extends Area2D
 
+@onready var base_position: Vector2 = global_position
 @onready var anim: AnimatedSprite2D = $"../AnimatedSprite2D"
 @onready var label: Label = $PressE
 var hasBody
@@ -21,6 +22,7 @@ func _process(delta: float) -> void:
 			get_parent().full = true
 			full = true
 			label.visible = false
+			player.base_position = base_position
 		var gear = player.gears.pop_front()
 		player.hasGear = !player.gears.is_empty()
 		if is_instance_valid(gear):

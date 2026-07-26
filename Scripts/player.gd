@@ -4,7 +4,6 @@ extends CharacterBody2D
 @onready var animation: AnimatedSprite2D = $Animation
 @onready var time_label: Label = $CanvasLayer/Time_label
 @onready var game_over_screen: CanvasLayer = $game_over_screen
-
 # Constants for movement physics
 const SPEED = 100.0
 const JUMP_VELOCITY = -400.0
@@ -61,7 +60,7 @@ func _physics_process(delta: float) -> void:
 	# Execute the movement and handle collisions
 	move_and_slide()
 
-func die():
+func die2():
 	print("you died")
 	velocity.y = 0
 	position = base_position
@@ -71,6 +70,20 @@ func die():
 	gears.clear()
 	hasGear = false
 	LevelReset.reset_gears = true
+
+func die():
+	print("you died")
+	velocity.y = 0
+	await Deathscreen.fade_out()
+	position = base_position
+	for gear in gears:
+		if is_instance_valid(gear):
+			gear.reset()
+	gears.clear()
+	hasGear = false
+	await Deathscreen.fade_in()
+	LevelReset.reset_gears = true
+
 
 func _on_timer_timeout() -> void:
 	if Countdown.countdown_time > 0:

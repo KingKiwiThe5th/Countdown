@@ -19,7 +19,7 @@ func _on_body_entered(body: Node2D) -> void:
 	has_triggered = true
 	shrinky = body
 
-	Engine.time_scale = 0.25
+	Engine.time_scale = 0.5
 	shrinky.velocity = Vector2.ZERO
 	timer.start()
 
