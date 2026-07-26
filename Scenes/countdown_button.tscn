@@ -1,14 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bc80h4hu485dn"]
+[gd_scene load_steps=9 format=3 uid="uid://bc80h4hu485dn"]
 
 [ext_resource type="Script" uid="uid://rlb21qe57iju" path="res://Scripts/countdown_button.gd" id="1_iea27"]
-[ext_resource type="Texture2D" uid="uid://b01y85icc21xg" path="res://Assets/buttonTexture.png" id="1_qfrdj"]
 [ext_resource type="Texture2D" uid="uid://c7a8xuhq70omb" path="res://Assets/activated_time_button.png" id="2_a1e6j"]
 [ext_resource type="Texture2D" uid="uid://cg3myc7fl3aum" path="res://Assets/activated_time_button-bad.png" id="3_j3wjn"]
+[ext_resource type="Texture2D" uid="uid://ckyq35r612wbc" path="res://Assets/deactivated_time_button.png" id="4_qmq07"]
 [ext_resource type="FontFile" uid="uid://b20ymth1saaq7" path="res://Assets/fonts/alagard.ttf" id="5_qmq07"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iea27"]
-atlas = ExtResource("1_qfrdj")
-region = Rect2(0, 0, 12, 12)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a1e6j"]
 animations = [{
@@ -30,7 +26,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iea27")
+"texture": ExtResource("4_qmq07")
 }],
 "loop": true,
 "name": &"default",

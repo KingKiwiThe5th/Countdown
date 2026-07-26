@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bx65f3a1luu0f"]
 
-[ext_resource type="Script" path="res://Scripts/gear_main.gd" id="1_1sowc"]
+[ext_resource type="Script" uid="uid://d515nv4hu1fd" path="res://Scripts/gear_main.gd" id="1_1sowc"]
 [ext_resource type="Texture2D" uid="uid://bn3ina1ffaa8g" path="res://Assets/cogItem-Sheet.png" id="1_7vd1c"]
 [ext_resource type="Script" uid="uid://d1yjdipoglxtu" path="res://Scripts/Gear.gd" id="2_7vd1c"]
 
