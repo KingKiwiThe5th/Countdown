@@ -136,6 +136,7 @@ size = Vector2(14, 30)
 size = Vector2(16, 25)
 
 [node name="Slasher" type="CharacterBody2D"]
+collision_layer = 4
 script = ExtResource("1_25uws")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
