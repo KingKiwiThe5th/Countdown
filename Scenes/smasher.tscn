@@ -1,7 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://euf6r2hrsxki"]
+[gd_scene load_steps=32 format=3 uid="uid://euf6r2hrsxki"]
 
 [ext_resource type="Texture2D" uid="uid://c2f213s30175w" path="res://Assets/Smasher-Sheet.png" id="1_4r1hg"]
 [ext_resource type="Script" uid="uid://bkb3cvabidfum" path="res://Scenes/smasher.gd" id="1_t14s7"]
+[ext_resource type="PackedScene" uid="uid://dxq33cuvlwhfv" path="res://Scenes/Killzone.tscn" id="3_as0be"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t14s7"]
 atlas = ExtResource("1_4r1hg")
@@ -215,7 +216,13 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kqpw"]
-radius = 16.0312
+radius = 14.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_as0be"]
+radius = 17.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ft03"]
+size = Vector2(16, 19)
 
 [node name="Smasher" type="CharacterBody2D"]
 script = ExtResource("1_t14s7")
@@ -240,4 +247,19 @@ wait_time = 1.5
 one_shot = true
 
 [node name="wallRayCast" type="RayCast2D" parent="."]
-target_position = Vector2(-37, 0)
+target_position = Vector2(-20, 0)
+
+[node name="KillZone" parent="." instance=ExtResource("3_as0be")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(2, 4)
+shape = SubResource("CircleShape2D_as0be")
+debug_color = Color(0.598696, 0.0429917, 0.21494, 0.42)
+
+[node name="KillZone2" parent="." instance=ExtResource("3_as0be")]
+position = Vector2(-2, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone2"]
+position = Vector2(10, 13.5)
+shape = SubResource("RectangleShape2D_2ft03")
+debug_color = Color(0.748301, 0.0521179, 0.238503, 0.42)
