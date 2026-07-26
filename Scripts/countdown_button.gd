@@ -12,7 +12,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		used = true
 		if type == "good":
 			anim.play("activated")
-			Countdown.countdown_reset(countdown_time)
+			Countdown.countdown_time += 20
 		else:
 			anim.play("activated_bad")
 			Countdown.countdown_time -= 3

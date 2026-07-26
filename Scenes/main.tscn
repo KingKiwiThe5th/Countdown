@@ -243,3 +243,12 @@ shape = SubResource("WorldBoundaryShape2D_jkdf5")
 
 [node name="Smasher" parent="." instance=ExtResource("15_wsu2k")]
 position = Vector2(130, 39)
+
+[node name="Ladder4" parent="." instance=ExtResource("5_kry3j")]
+position = Vector2(158, 173)
+
+[node name="Ladder5" parent="." instance=ExtResource("5_kry3j")]
+position = Vector2(113, 149)
+
+[node name="Ladder6" parent="." instance=ExtResource("5_kry3j")]
+position = Vector2(64, 125)
